@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 // import { auth } from "../../../auth";
 
 export const Avatar = async () => {
@@ -15,17 +14,9 @@ export const Avatar = async () => {
 
   return (
     <>
-      {name ? (
-        <Image
-          className="shrink-0 size-9.5 rounded-lg"
-          src={name}
-          alt="Avatar"
-        />
-      ) : (
-        <div className="shrink-0 size-9.5 rounded-lg bg-gray-800 text-white content-center text-center">
-          {getAcronym(name)}
-        </div>
-      )}
+      <div className="shrink-0 size-9.5 rounded-lg bg-soft-green-bg text-header-background content-center text-center">
+        {getAcronym(name)}
+      </div>
     </>
   );
 };
